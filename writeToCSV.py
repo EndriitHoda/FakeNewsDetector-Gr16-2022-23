@@ -15,3 +15,11 @@ def fillDF(_vertetesia, dataFrame):
             i=i+1;
             file.close()
     return dataFrame
+
+
+data=[]
+dataFrame = pd.DataFrame(data, columns =['lajmi', 'vertetesia'])
+dataFrame = fillDF("true", dataFrame)
+dataFrame = fillDF("fake", dataFrame)
+dataFrame = dataFrame.sample(frac=1)
+dataFrame.to_csv('Lajmet.csv', index=False, mode='w')
