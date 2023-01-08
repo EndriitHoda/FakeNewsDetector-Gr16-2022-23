@@ -23,3 +23,4 @@ dataFrame = fillDF("true", dataFrame)
 dataFrame = fillDF("fake", dataFrame)
 dataFrame = dataFrame.sample(frac=1)
 dataFrame.to_csv('Lajmet.csv', index=False, mode='w')
+
